@@ -1,0 +1,3514 @@
+<style id="server-side-styles">* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* [data-reach-custom-checkbox-container]:focus-within, * [data-reach-custom-checkbox-container][data-focus] {
+  outline: none;
+  box-shadow: none;
+}
+button, input, select, textarea {
+  outline: none !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+html {
+  height: auto;
+  font-size: 16px;
+  --radius-0: 0px;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  min-height: -webkit-fill-available;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-22: 22px;
+  --radius-24: 24px;
+  --spacing-0: 0px;
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  font-family: Picsart-Fonts, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, Helvetica, Arabic, sans-serif;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-44: 44px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-72: 72px;
+  --texts-base: #000000;
+  --easing-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --texts-tint-1: #4c4c4c;
+  --texts-tint-2: #808080;
+  --texts-tint-3: #999999;
+  --timings-fast: 100ms;
+  --timings-long: 1000ms;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  --easing-bounce: cubic-bezier(0.5, -0.4, 0.55, 1.4);
+  --easing-linear: cubic-bezier(0, 0, 1, 1);
+  --radius-circle: 50%;
+  --timings-heavy: 2000ms;
+  --easing-ease-in: cubic-bezier(0.42, 0, 1, 1);
+  --texts-negative: #000000;
+  --texts-positive: #ffffff;
+  --timings-medium: 500ms;
+  --easing-ease-out: cubic-bezier(0, 0, 0.58, 1);
+  --timings-default: 300ms;
+  --backgrounds-base: #FCFCFC;
+  --easing-practical: cubic-bezier(0.3, 0.15, 0.5, 1);
+  --shadows-tint-1-x: 0px;
+  --shadows-tint-1-y: 0px;
+  --shadows-tint-2-x: 0px;
+  --shadows-tint-2-y: 0px;
+  --shadows-tint-3-x: 0px;
+  --shadows-tint-3-y: 0px;
+  --backgrounds-panel: #f2f2f299;
+  --easing-expressive: cubic-bezier(0.5, 0.05, 0.3, 1);
+  --statuses-disabled: 0.32;
+  --tab-outline-color: #656BFC;
+  tap-highlight-color: transparent;
+  --backgrounds-tint-1: #f7f7f7;
+  --backgrounds-tint-2: #f2f2f2;
+  --backgrounds-tint-3: #e8e8e8;
+  --backgrounds-tint-4: #dedede;
+  --backgrounds-tint-5: #d4d4d4;
+  --backgrounds-tint-6: #c9c9c9;
+  --easing-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --markets-base-action: #B995F3;
+  --markets-base-active: #EDEDED;
+  --markets-text-action: #5A00EE;
+  --markets-text-active: #000000;
+  --premium-base-action: #0E5957;
+  --premium-base-active: #158380;
+  --premium-text-action: #ffffff;
+  --premium-text-active: #ffffff;
+  --shadows-tint-1-blur: 16px;
+  --shadows-tint-2-blur: 16px;
+  --shadows-tint-3-blur: 16px;
+  font-feature-settings: normal;
+  --backgrounds-negative: #000000;
+  --backgrounds-positive: #ffffff;
+  --controls-text-action: #4D4D4D;
+  --controls-text-active: #000000;
+  --markets-base-default: #E7DCF9;
+  --markets-text-default: #5A00EE;
+  --premium-base-default: #158380;
+  --premium-text-default: #ffffff;
+  --shadows-tint-1-color: #00000024;
+  --shadows-tint-2-color: #00000038;
+  --shadows-tint-3-color: #00000061;
+  --controls-caret-action: #5A00EE;
+  --controls-caret-active: #5A00EE;
+  --controls-text-default: #616161;
+  --controls-value-action: #4D4D4D;
+  --controls-value-active: #000000;
+  --shadows-tint-1-spread: 0px;
+  --shadows-tint-2-spread: 0px;
+  --shadows-tint-3-spread: 0px;
+  --accents-primary-tint-1: #f40bf4;
+  --accents-primary-tint-2: #ec46ec;
+  --accents-primary-tint-3: #ed78ed;
+  --accents-primary-tint-4: #f0a8f0;
+  --accents-primary-tint-5: #f7d4f7;
+  --accents-primary-tint-6: #faeafa;
+  --controls-border-action: #E0E0E0;
+  --controls-border-active: #E0E0E0;
+  --controls-caret-default: #5A00EE;
+  --controls-value-default: #616161;
+  --typography-1-font-size: 8px;
+  --typography-2-font-size: 10px;
+  --typography-3-font-size: 12px;
+  --typography-4-font-size: 14px;
+  --typography-5-font-size: 16px;
+  --typography-6-font-size: 20px;
+  --typography-7-font-size: 24px;
+  --typography-8-font-size: 30px;
+  --typography-9-font-size: 36px;
+  -webkit-text-size-adjust: none;
+  --backgrounds-gradient-up: linear-gradient(360deg, #fcfcfccc 0%, transparent 100%);
+  --backgrounds-transparent: #00000085;
+  --controls-border-default: #E0E0E0;
+  --typography-10-font-size: 42px;
+  --typography-11-font-size: 60px;
+  --accents-secondary-tint-1: #680aff;
+  --accents-secondary-tint-2: #7a2ff4;
+  --accents-secondary-tint-3: #9a63f2;
+  --accents-secondary-tint-4: #b995f3;
+  --accents-secondary-tint-5: #d8c5f7;
+  --accents-secondary-tint-6: #e7dcf9;
+  --controls-end-icon-action: #4D4D4D;
+  --controls-end-icon-active: #000000;
+  --typography-1-line-height: 10px;
+  --typography-2-line-height: 14px;
+  --typography-3-line-height: 16px;
+  --typography-4-line-height: 20px;
+  --typography-5-line-height: 24px;
+  --typography-6-line-height: 28px;
+  --typography-7-line-height: 32px;
+  --typography-8-line-height: 36px;
+  --typography-9-line-height: 48px;
+  --backgrounds-gradient-down: linear-gradient(180deg, #fcfcfccc 0%, transparent 100%);
+  --controls-end-icon-default: #616161;
+  --typography-10-line-height: 50px;
+  --typography-11-line-height: 72px;
+  --absolute-black-base-action: #313131;
+  --absolute-black-base-active: #000000;
+  --absolute-black-text-action: #ffffff;
+  --absolute-black-text-active: #ffffff;
+  --absolute-white-base-action: #ECECEC;
+  --absolute-white-base-active: #ffffff;
+  --absolute-white-text-action: #000000;
+  --absolute-white-text-active: #000000;
+  --controls-background-action: #F7F7F7;
+  --controls-background-active: #EEEEEE;
+  --controls-start-icon-action: #4D4D4D;
+  --controls-start-icon-active: #000000;
+  --markets-base-active-action: #D9D9D9;
+  --markets-text-active-action: #000000;
+  --premium-base-active-active: #0E5957;
+  --premium-text-active-action: #ffffff;
+  --statuses-error-base-action: #9D0007;
+  --statuses-error-base-active: #D31E2A;
+  --statuses-error-text-action: #ffffff;
+  --statuses-error-text-active: #ffffff;
+  --absolute-black-base-default: #000000;
+  --absolute-black-text-default: #ffffff;
+  --absolute-white-base-default: #ffffff;
+  --absolute-white-text-default: #000000;
+  --accents-primary-base-action: #920792;
+  --accents-primary-base-active: #C209C1;
+  --accents-primary-text-action: #ffffff;
+  --accents-primary-text-active: #ffffff;
+  --controls-background-default: #FFFFFF;
+  --controls-placeholder-action: #929292;
+  --controls-placeholder-active: #929292;
+  --controls-start-icon-default: #616161;
+  --controls-text-active-action: #616161;
+  --statuses-error-base-default: #D31E2A;
+  --statuses-error-text-default: #ffffff;
+  --accents-primary-base-default: #C209C1;
+  --accents-primary-text-default: #ffffff;
+  --accents-tertiary-base-action: #B4B4B4;
+  --accents-tertiary-base-active: #f2f2f2;
+  --accents-tertiary-text-action: #000000;
+  --accents-tertiary-text-active: #000000;
+  --controls-caret-active-action: #5A00EE;
+  --controls-placeholder-default: #929292;
+  --controls-slider-thumb-action: #F1F1F1;
+  --controls-slider-thumb-active: #FEFEFE;
+  --controls-slider-track-action: #FFFFFF;
+  --controls-slider-track-active: #FFFFFF;
+  --controls-value-active-action: #616161;
+  --statuses-success-base-action: #0E5A18;
+  --statuses-success-base-active: #158423;
+  --statuses-success-text-action: #ffffff;
+  --statuses-success-text-active: #ffffff;
+  --statuses-warning-base-action: #C9760E;
+  --statuses-warning-base-active: #FE9D24;
+  --statuses-warning-text-action: #000000;
+  --statuses-warning-text-active: #000000;
+  --accents-secondary-base-action: #3f00a3;
+  --accents-secondary-base-active: #5A00EE;
+  --accents-secondary-text-action: #ffffff;
+  --accents-secondary-text-active: #ffffff;
+  --accents-tertiary-base-default: #f2f2f2;
+  --accents-tertiary-text-default: #000000;
+  --backgrounds-canvas-back-layer: #ededed;
+  --controls-border-active-action: #E0E0E0;
+  --controls-slider-thumb-default: #FEFEFE;
+  --controls-slider-track-default: #FFFFFF;
+  --statuses-negative-base-action: #787878;
+  --statuses-negative-base-active: #000000;
+  --statuses-negative-text-action: #ffffff;
+  --statuses-negative-text-active: #ffffff;
+  --statuses-positive-base-action: #B4B4B4;
+  --statuses-positive-base-active: #ffffff;
+  --statuses-positive-text-action: #000000;
+  --statuses-positive-text-active: #000000;
+  --statuses-success-base-default: #158423;
+  --statuses-success-text-default: #ffffff;
+  --statuses-warning-base-default: #FE9D24;
+  --statuses-warning-text-default: #000000;
+  --accents-secondary-base-default: #5A00EE;
+  --accents-secondary-text-default: #ffffff;
+  --statuses-highlight-base-action: #008685;
+  --statuses-highlight-base-active: #00C5C3;
+  --statuses-highlight-text-action: #000000;
+  --statuses-highlight-text-active: #000000;
+  --statuses-negative-base-default: #000000;
+  --statuses-negative-text-default: #ffffff;
+  --statuses-positive-base-default: #ffffff;
+  --statuses-positive-text-default: #000000;
+  --controls-end-icon-active-action: #616161;
+  --statuses-highlight-base-default: #00C5C3;
+  --statuses-highlight-text-default: #000000;
+  --statuses-information-base-action: #3D00A2;
+  --statuses-information-base-active: #5A00EE;
+  --statuses-information-text-action: #ffffff;
+  --statuses-information-text-active: #ffffff;
+  --absolute-black-base-action-active: #313131;
+  --absolute-black-text-active-action: #ffffff;
+  --absolute-white-base-action-active: #ECECEC;
+  --absolute-white-text-active-action: #000000;
+  --controls-background-active-action: #F7F7F7;
+  --controls-start-icon-active-action: #616161;
+  --statuses-error-base-active-action: #9D0007;
+  --statuses-error-text-active-action: #ffffff;
+  --statuses-information-base-default: #5A00EE;
+  --statuses-information-text-default: #ffffff;
+  --accents-primary-base-active-action: #920792;
+  --accents-primary-text-active-action: #ffffff;
+  --controls-placeholder-active-action: #929292;
+  --accents-tertiary-base-active-action: #B4B4B4;
+  --accents-tertiary-text-active-action: #000000;
+  --controls-slider-thumb-active-action: #F1F1F1;
+  --controls-slider-track-active-action: #FFFFFF;
+  --statuses-success-base-active-action: #0E5A18;
+  --statuses-success-text-active-action: #ffffff;
+  --statuses-warning-base-active-action: #C9760E;
+  --statuses-warning-text-active-action: #000000;
+  --accents-secondary-base-active-action: #3f00a3;
+  --accents-secondary-text-active-action: #ffffff;
+  --statuses-negative-base-active-action: #787878;
+  --statuses-negative-text-active-action: #ffffff;
+  --statuses-positive-base-active-action: #B4B4B4;
+  --statuses-positive-text-active-action: #000000;
+  --statuses-highlight-base-active-action: #008685;
+  --statuses-highlight-text-active-action: #000000;
+  --statuses-information-base-active-action: #3D00A2;
+  --statuses-information-text-active-action: #ffffff;
+}
+@supports (-webkit-touch-callout: none) {
+  html {
+    -webkit-overflow-scrolling: auto;
+  }
+}
+  html.desktop {
+    min-width: 1024px;
+    scrollbar-color: var(--x-accent-1-1) rgba(0,0,0,0.08);
+    scrollbar-width: thin;
+  }
+  html.tab-enabled *[tabindex]:focus {
+    outline-color: var(--tab-outline-color);
+    outline-style: auto;
+    outline-width: 2px;
+    outline-offset: -1px;
+  }
+  html.tab-disabled *[tabindex]:focus {
+    outline: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:not([class]) {
+    color: var(--x-accent-1-1);
+    transition: color 0.3s ease-in-out;
+  }
+  a:not([class]):hover {
+    color: var(--x-accent-1-2);
+  }
+  a:not([class]):active {
+    color: var(--x-accent-1-2);
+  }
+  input, button, textarea, select {
+    font-family: inherit;
+  }
+  ::-moz-selection {
+    color: var(--x-text-color-3);
+    background-color: var(--x-accent-1-1);
+  }
+  ::selection {
+    color: var(--x-text-color-3);
+    background-color: var(--x-accent-1-1);
+  }
+  :root {
+    --max-width-01: 1096px;
+    --max-width-02: 1440px;
+    --x-icon-bg-red: rgba(211, 30, 42, 0.2);
+    --x-icon-bg-blue: #dae8f9;
+    --x-icon-bg-pink: #FCEEFC;
+    --x-text-color-4: #222;
+    --x-disabled-rate: 0.48;
+    --x-gradient-dusk: linear-gradient(165.96deg, #5299BE 0%, #E54A39 51.56%, #376C34 100%);
+    --x-gradient-gold: linear-gradient(164.31deg, #F3A53A 0%, #BF5794 52.31%, #A0258F 100%);
+    --x-icon-bg-green: rgba(16, 147, 127, 0.2);
+    --x-icon-fill-red: #E34C3C;
+    --x-gradient-alien: linear-gradient(166.19deg, #56BAC0 0%, #CD7861 50.7%, #5C22C3 100%);
+    --x-gradient-venus: linear-gradient(166.19deg, #FFADFF 0%, #379087 50.7%, #BD382A 100%);
+    --x-icon-bg-indigo: rgba(116, 5, 116, 0.2);
+    --x-icon-bg-purple: rgba(90, 0, 238, 0.2);
+    --x-icon-bg-yellow: #FCECD2;
+    --x-icon-fill-blue: #4492DC;
+    --x-icon-fill-pink: var(--x-accent-1-1);
+    --x-breadcrumb-last: #4C4C4C;
+    --x-gradient-desert: linear-gradient(166.24deg, #CB8160 0%, #323539 100%);
+    --x-gradient-sahara: linear-gradient(166.19deg, #FFFF6F 0%, #84403D 50.7%, #553D36 100%);
+    --x-icon-bg-magenta: rgba(194, 9, 193, 0.2);
+    --x-icon-fill-green: #3D8D84;
+    --x-gradient-primary: linear-gradient(141.45deg, #00FFED 0%, #19D7E7 22.97%, #7F4AD9 45.71%, #AF1FC6 66.78%, #D402C0 100%);
+    --x-gradient-sunrise: linear-gradient(165.96deg, #E9B77F 0%, #E51E2B 55.73%, #352CB6 100%);
+    --x-icon-fill-indigo: #740574;
+    --x-icon-fill-purple: var(--x-accent-2-1);
+    --x-icon-fill-yellow: #F19E1F;
+    --x-transparent-dark: rgba(18, 18, 18, 0.72);
+    --x-aim-outline-color: #005fcc;
+    --x-breadcrumb-normal: #808080;
+    --x-gradient-midnight: linear-gradient(166.19deg, #FFB4B4 0%, #5C2550 50.7%, #285D74 100%);
+    --x-icon-fill-magenta: var(--x-accent-1-1);
+    --x-transparent-light: rgba(255, 255, 255, 0.72);
+    --x-icon-bg-light-green: rgba(69, 164, 85, 0.2);
+    --x-gradient-sandy-storm: linear-gradient(166.19deg, #FFB3B3 0%, #2D5A6B 100%);
+    --x-icon-fill-light-green: #45A456;
+    --x-transparent-linear-up: linear-gradient(360deg, rgba(18, 18, 18, 0.6336) 0%, rgba(18, 18, 18, 0) 100%);
+    --x-transparent-linear-down: linear-gradient(180deg, rgba(18, 18, 18, 0.6336) 0%, rgba(18, 18, 18, 0) 100%);
+  }
+  :root, :root.light {
+    --x-bg-1: #ffffff;
+    --x-bg-2: #f2f2f7;
+    --x-bg-3: #e5e5e5;
+    --x-bg-4: #262628;
+    --x-bg-5: #F7F7F7;
+    --x-bg-6: #F0F0F0;
+    --x-bg-7: #EDEDED;
+    --x-bg-8: #E3E3E3;
+    --x-bg-9: #D9D9D9;
+    --x-bg-10: #158380;
+    --x-bg-11: #F7D4F7;
+    --x-bg-12: #FCFCFC;
+    --x-bg-13: #ECECEC;
+    --x-bg-14: #f2f2f2;
+    --x-bg-15: #E7DCF9;
+    --x-black: var(--x-text-color-1);
+    --x-white: var(--x-text-color-3);
+    --x-black-1: #000000;
+    --x-bg-modal: rgba(0,0,0,.75);
+    --x-border-1: #e7e7e7;
+    --x-border-2: #cccccc;
+    --x-border-3: #f2f2f7;
+    --x-border-4: #b7b7b7;
+    --x-border-5: #C9C9C9;
+    --x-shadow-1: #cccccc;
+    --x-bg-accent: rgba(76, 4, 76, 0.1);
+    --x-footer-bg: #1E2129;
+    --x-accent-1-1: #C209C1;
+    --x-accent-1-2: #CE3ACD;
+    --x-accent-1-3: #DA6BDA;
+    --x-accent-1-4: #E79DE6;
+    --x-accent-1-5: #F6E8F1;
+    --x-accent-1-6: #FAEAFA;
+    --x-accent-2-1: #5A00EE;
+    --x-accent-2-2: #7B33F1;
+    --x-accent-2-3: #9C66F5;
+    --x-accent-2-4: #BD99F8;
+    --x-accent-2-5: #DACAFB;
+    --x-accent-2-6: #3D00A2;
+    --x-bg-filetype: #C0381D;
+    --x-error-color: #D31E2A;
+    --x-shadow-card: rgba(17, 18, 54, 0.16);
+    --x-status-info: #11a8ee;
+    --x-icon-color-1: var(--x-text-color-1);
+    --x-icon-color-2: var(--x-text-color-2);
+    --x-icon-color-3: var(--x-text-color-3);
+    --x-status-error: #E7000A;
+    --x-text-color-1: #080808;
+    --x-text-color-2: #5F5F5F;
+    --x-text-color-3: #f9f9f9;
+    --x-text-color-4: #808080;
+    --x-text-color-5: #222222;
+    --x-text-color-6: #999999;
+    --x-text-color-7: #303030;
+    --x-text-color-8: #b4b4b4;
+    --x-status-success: #007675;
+    --x-status-warning: #F67E0C;
+    --x-accent-1-action: #8F008A;
+    --x-accent-2-action: #3A0098;
+    --x-bg-app-icon-red: rgba(211, 30, 42, 0.2);
+    --x-bg-section-card: #F4F5F8;
+    --x-border-filetype: #007675;
+    --x-new-label-color: #FE9D24;
+    --x-shadow-filetype: #00767554;
+    --x-bg-app-icon-blue: #DAE9F8;
+    --x-bg-app-icon-pink: #FCEEFC;
+    --x-bg-app-icon-green: #D8E8E6;
+    --x-bg-app-icon-purple: #F2EBFE;
+    --x-bg-app-icon-yellow: #FCECD2;
+    --x-status-info-action: blue;
+    --x-bg-app-icon-magenta: rgba(194, 9, 193, 0.2);
+    --x-status-error-action: red;
+    --x-text-color-disabled: #9D9D9D;
+    --x-textf-field-color-1: #949494;
+    --x-bg-app-icon-pink-dark: rgba(116, 5, 116, 0.2);
+    --x-bg-app-icon-turquoise: rgba(16, 147, 127, 0.2);
+    --x-status-success-action: green;
+    --x-status-warning-action: yellow;
+    --x-text-color-disabled-1: #CFCFCF;
+    --x-alert-description-color: #888888;
+    --x-bg-app-icon-light-green: rgba(69, 164, 85, 0.2);
+    --x-bg-app-icon-purple-dark: rgba(90, 0, 238, 0.2);
+    --x-bg-section-card-opacity: rgba(244,245,248,0.5);
+  }
+  :root.dark {
+    --x-bg-1: #000000;
+    --x-bg-2: #0d0d08;
+    --x-bg-3: #1a1a1a;
+    --x-bg-4: #d9d9d7;
+    --x-black: var(--x-text-color-1);
+    --x-white: var(--x-text-color-3);
+    --x-bg-modal: rgba(0,0,0,.35);
+    --x-border-1: #181818;
+    --x-border-2: #333333;
+    --x-border-3: #0d0d08;
+    --x-border-4: #0d0d08;
+    --x-shadow-1: #333333;
+    --x-accent-1-1: #72FFEA;
+    --x-accent-1-2: #00C5C3;
+    --x-accent-1-3: #009E9C;
+    --x-accent-1-4: #007675;
+    --x-accent-1-5: #004F4E;
+    --x-accent-2-1: #7B33F1;
+    --x-accent-2-2: #5300DB;
+    --x-accent-2-3: #4400B5;
+    --x-accent-2-4: #3D00A2;
+    --x-accent-2-5: #2F007C;
+    --x-bg-filetype: #C0381D;
+    --x-shadow-card: rgba(17, 18, 54, 0.16);
+    --x-status-info: #11a8ee;
+    --x-icon-color-1: var(--x-text-color-1);
+    --x-icon-color-2: var(--x-text-color-2);
+    --x-icon-color-3: var(--x-text-color-3);
+    --x-status-error: #F33462;
+    --x-text-color-1: #f9f9f9;
+    --x-text-color-2: #A0A0A3;
+    --x-text-color-3: #080808;
+    --x-status-success: #72FFEA;
+    --x-status-warning: #E4A546;
+    --x-accent-1-action: #00C5C3;
+    --x-accent-2-action: #4400B5;
+    --x-bg-section-card: #0B0A07;
+    --x-border-filetype: #007675;
+    --x-shadow-filetype: #00767554;
+    --x-status-info-action: blue;
+    --x-status-error-action: red;
+    --x-text-color-disabled: #636369;
+    --x-status-success-action: green;
+    --x-status-warning-action: yellow;
+  }
+  :root.aim-enabled *[tabindex]:focus {
+    outline-color: var(--x-aim-outline-color);
+    outline-style: auto;
+    outline-width: 2px;
+    outline-offset: -1px;
+  }
+  :root.aim-disabled *[tabindex]:focus {
+    outline: none;
+  }
+  .color--primary {
+    color: var(--x-accent-1-1);
+  }
+  .color--secondary {
+    color: var(--x-accent-2-1);
+  }
+  .color--tertiary {
+    color: var(--x-accent-3-1);
+  }
+  .color--success {
+    color: var(--x-status-success);
+  }
+  .color--warning {
+    color: var(--x-status-warning);
+  }
+  .color--error {
+    color: var(--x-status-error);
+  }
+  .color--black {
+    color: var(--x-black);
+  }
+  .color--white {
+    color: var(--x-white);
+  }
+  .grecaptcha-badge {
+    bottom: 90px !important;
+  }
+  .flex {
+    display: flex;
+  }
+  .align-center {
+    align-items: center;
+  }
+  .justify-start {
+    justify-content: start;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  .fs-14 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .fs-16 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .fs-42 {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+  .internal-link {
+    color: var(--x-accent-2-1);
+  }
+  .landing-banner + .landing-banner {
+    margin-top: 80px;
+  }
+@media screen and (max-width: 768px) {
+  .landing-banner + .landing-banner {
+    margin-top: 40px;
+  }
+}
+  .AppSwitcher-root-0-2-135 {
+    display: flex;
+    z-index: 101;
+    position: relative;
+    justify-content: center;
+    --switcherItemWidth: auto;
+  }
+  .AppSwitcher-scrollable-0-2-136 {
+    width: fit-content;
+    display: flex;
+    max-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .AppSwitcher-scrollable-0-2-136::-webkit-scrollbar {
+    display: none;
+  }
+@media screen and (max-width: 768px) {
+  .AppSwitcher-scrollable-0-2-136 {
+    overflow: auto;
+  }
+}
+  .AppSwitcher-container-0-2-137 {
+    display: flex;
+    border-radius: 24px;
+    background-color: #EAECF3;
+  }
+  .AppSwitcher-items-0-2-138 {
+    border: 2px solid var(--x-accent-2-5);
+    display: flex;
+    padding: 4px;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 24px;
+    background-color: var(--x-bg-1);
+  }
+  .AppSwitcher-buttonContainer-0-2-139 {
+    position: relative;
+  }
+  .AppSwitcher-buttonContainer-0-2-139:hover .AppSwitcher-tooltipContainer-0-2-140 {
+    display: inline-flex;
+    justify-content: center;
+  }
+@media screen and (max-width: 768px) {
+  .AppSwitcher-buttonContainer-0-2-139:hover .AppSwitcher-tooltipContainer-0-2-140 {
+    display: none;
+  }
+}
+  .AppSwitcher-tooltipContainer-0-2-140 {
+    top: calc(100% + 9px);
+    right: 0;
+    width: 100%;
+    display: none;
+    z-index: 100;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .AppSwitcher-button-0-2-141 {
+    color: var(--x-accent-2-1);
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 27px;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .AppSwitcher-selected-0-2-142 {
+    cursor: default;
+    border-radius: 24px;
+    background-color: var(--x-accent-2-5);
+  }
+  .AppSwitcher-marginItem-0-2-143 {
+    display: flex;
+    padding: 7px 27px;
+    flex-grow: 1;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+    justify-content: center;
+  }
+  .Tooltip-root-0-2-144 {
+    color: var(--x-bg-1);
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 8px;
+  }
+  .Tooltip-arrowContainer-0-2-145 {
+    right: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
+  .Tooltip-arrowContainer-0-2-145.up {
+    top: -6px;
+  }
+  .Tooltip-arrowContainer-0-2-145.down {
+    bottom: -6px;
+  }
+  .Tooltip-arrow-0-2-146 {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  .Tooltip-black-0-2-147 {
+    background-color: var(--x-text-color-1);
+  }
+  .Tooltip-black-0-2-147 .down .Tooltip-arrow-0-2-146 {
+    border-top: 8px solid var(--x-text-color-1);
+  }
+  .Tooltip-black-0-2-147 .up .Tooltip-arrow-0-2-146 {
+    border-bottom: 8px solid var(--x-text-color-1);
+  }
+  .Tooltip-magenta-0-2-148 {
+    background-color: var(--x-accent-1-1);
+  }
+  .Tooltip-magenta-0-2-148 .down .Tooltip-arrow-0-2-146 {
+    border-top: 8px solid var(--x-accent-1-1);
+  }
+  .Tooltip-magenta-0-2-148 .up .Tooltip-arrow-0-2-146 {
+    border-bottom: 8px solid var(--x-accent-1-1);
+  }
+  .button-root-0-2-347 {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-root-0-2-347[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+@media (hover: hover) {
+  .button-root-0-2-347 {  }
+  .button-root-0-2-347:hover {  }
+  .button-root-0-2-347:hover svg path {  }
+  .button-root-0-2-347:hover &gt; .button-content-0-2-348 {  }
+  .button-root-0-2-347:hover[disabled] {  }
+  .button-root-0-2-347:hover[disabled] &gt; .button-content-0-2-348 {  }
+}
+@media (hover: none) {
+  .button-root-0-2-347 {  }
+  .button-root-0-2-347:active {  }
+  .button-root-0-2-347:active &gt; .button-content-0-2-348 {  }
+}
+  .button-root-0-2-347[disabled]:hover {  }
+  .button-root-0-2-347[disabled] &gt; .button-content-0-2-348 {  }
+  .button-content-0-2-348 {
+    gap: 8px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .button-content-0-2-348 svg {  }
+  .button-content-0-2-348 svg &gt; path {
+    fill: currentColor;
+  }
+  .button-root-d0-0-2-349 {
+    padding: 14px 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: var(--x-accent-1-1);
+    color: #FFFFFF;
+  }
+  .button-root-d0-0-2-349[disabled] {  }
+@media (hover: hover) {
+  .button-root-d0-0-2-349 {  }
+  .button-root-d0-0-2-349:hover {
+    background-color: var(--x-accent-1-action);
+    border: 2px solid transparent;
+  }
+  .button-root-d0-0-2-349:hover svg path {
+    fill: auto;
+  }
+  .button-root-d0-0-2-349:hover &gt; .button-content-0-2-348 {
+    color: revert;
+  }
+  .button-root-d0-0-2-349:hover[disabled] {
+    border: 2px solid transparent;
+  }
+  .button-root-d0-0-2-349:hover[disabled] &gt; .button-content-0-2-348 {
+    color: #FFFFFF;
+  }
+}
+@media (hover: none) {
+  .button-root-d0-0-2-349 {  }
+  .button-root-d0-0-2-349:active {
+    background-color: var(--x-accent-1-action);
+  }
+  .button-root-d0-0-2-349:active &gt; .button-content-0-2-348 {
+    color: revert;
+  }
+}
+  .button-root-d0-0-2-349[disabled]:hover {
+    background-color: var(--x-accent-1-1);
+  }
+  .button-root-d0-0-2-349[disabled] &gt; .button-content-0-2-348 {
+    color: #FFFFFF;
+  }
+  .button-content-d3-0-2-350 {
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+  }
+  .radio-root-0-2-190 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  .radio-root-0-2-190.disabled {
+    opacity: .5;
+  }
+  .radio-root-0-2-190:focus-visible {
+    outline: none;
+    border-color: transparent;
+  }
+  .radio-root-0-2-190.selected {
+    cursor: default;
+  }
+  .radio-control-0-2-191 {
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    position: absolute;
+  }
+  .radio-label-0-2-192 {
+    color: #000000;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+    vertical-align: middle;
+  }
+  .radio-icon-0-2-193 {
+    width: 20px;
+    border: 2px solid gray;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-inline-end: 8px;
+  }
+  .radio-icon-0-2-193.active {
+    border: 2px solid var(--x-accent-2-1);
+  }
+  .radio-icon-0-2-193 &gt; .check {
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    background: var(--x-accent-2-1);
+    margin-top: -5px;
+    border-radius: 100%;
+    margin-inline-start: -5px;
+  }
+  .card-root-0-2-263 {
+    padding: 20px;
+    background: var(--x-bg-1);
+    box-shadow: 0px 1px 4px 0px var(--x-shadow-card);
+    border-radius: 8px;
+  }
+  .typography-root-0-2-283.look-h1 {
+    color: var(--x-accent-2-1);
+    font-size: 4.2857rem;
+    font-weight: bold;
+    line-height: 5rem;
+  }
+  .typography-root-0-2-283.look-h2 {
+    color: var(--x-accent-2-1);
+    font-size: 3.75rem;
+    font-weight: bold;
+  }
+  .typography-root-0-2-283.look-h3 {
+    color: var(--x-accent-2-1);
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .typography-root-0-2-283.look-h4 {
+    color: var(--x-accent-2-1);
+    font-size: 2.125rem;
+    font-weight: bold;
+  }
+  .typography-root-0-2-283.look-h5 {
+    color: var(--x-accent-2-1);
+    font-size: 1.334rem;
+    font-weight: bold;
+  }
+  .typography-root-0-2-283.look-h6 {
+    color: var(--x-accent-2-1);
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .typography-root-0-2-283.look-p {
+    color: var(--x-text-color-1);
+    font-size: 1.1429rem;
+    font-weight: normal;
+  }
+  .typography-root-0-2-283.look-strong {
+    color: var(--x-text-color-1);
+    font-size: 1.1429rem;
+    font-weight: 600;
+  }
+  .typography-root-0-2-283.look-span {
+    color: var(--x-text-color-1);
+    font-size: 1.1429rem;
+    font-weight: normal;
+  }
+  .typography-root-0-2-283.look-title {
+    color: var(--x-text-color-1);
+    font-size: 4.2857rem;
+    font-weight: 900;
+  }
+  .typography-root-0-2-283.look-subtitle {
+    color: var(--x-text-color-2);
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .typography-root-0-2-283.look-body {
+    color: var(--x-text-color-1);
+    font-size: 1.1429rem;
+    font-weight: normal;
+    line-height: 1.7143rem;
+  }
+  .typography-root-0-2-283.look-body-large {
+    color: var(--x-text-color-1);
+    font-size: 1.429rem;
+    font-weight: normal;
+  }
+  .typography-root-0-2-283.look-description {
+    color: var(--x-text-color-2);
+    font-size: 2.125rem;
+    font-weight: normal;
+  }
+  .PillsButtons-withBorder-0-2-183 {  }
+  .PillsButtons-withBorder-0-2-183 li {
+    width: 100%;
+    border: 2px solid var(--x-bg-8);
+    padding: 14px 16px;
+    border-radius: 12px;
+    background-color: var(--x-bg-12);
+  }
+  .PillsButtons-withBorder-0-2-183 li span {
+    font-size: 16px;
+    line-height: 16px;
+  }
+@media screen and (max-width: 768px) {
+  .PillsButtons-withBorder-0-2-183 li {
+    width: auto;
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+  }
+  .PillsButtons-withBorder-0-2-183 li span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+  .PillsButtons-root-0-2-184 {
+    flex: 0 0 206px;
+  }
+@media screen and (max-width: 480px) {
+  .PillsButtons-root-0-2-184 {
+    top: 58px;
+  }
+}
+  .PillsButtons-list-0-2-185 {
+    display: flex;
+    list-style-type: none;
+  }
+  .PillsButtons-heading-0-2-186 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-block-end: 16px;
+  }
+  .PillsButtons-item-0-2-187 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .PillsButtons-item-0-2-187&gt;:first-child {
+    margin-right: 8px;
+  }
+  .PillsButtons-link-0-2-188 {
+    outline: none;
+    text-decoration: none;
+  }
+  .PillsButtons-link-0-2-188.isSelected {
+    cursor: default;
+  }
+  .PillsButtons-list-d0-0-2-189 {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .Tooltip-root-0-2-118 {
+    width: 100%;
+    height: 36px;
+  }
+  .Tooltip-container-0-2-119 {
+    width: 100%;
+    margin: auto;
+    max-width: 1360px;
+    padding-top: 12px;
+  }
+@media screen and (max-width: 1440px) {
+  .Tooltip-container-0-2-119 {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .Tooltip-container-0-2-119 {
+    max-width: fit-content;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Tooltip-container-0-2-119 {
+    margin-left: 24px;
+  }
+}
+  .Tooltip-list-0-2-120 {
+    display: flex;
+    max-width: 1360px;
+    list-style: none;
+    margin-inline: auto;
+  }
+  .Tooltip-item-0-2-121 {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    font-weight: 500;
+    line-height: 16px;
+    margin-inline-end: 8px;
+  }
+  .Tooltip-item-0-2-121:last-child .Tooltip-link-0-2-122 {
+    cursor: initial;
+  }
+  .Tooltip-link-0-2-122 {
+    text-decoration: none;
+  }
+  .Tooltip-icon-0-2-123 {  }
+  .Tooltip-underlineText-0-2-124 {
+    text-decoration: underline;
+  }
+  .Tooltip-listboxButton-0-2-125 {
+    color: var(--x-text-color-4);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .Tooltip-buttonClass-0-2-126 {
+    padding: 0px !important;
+    background-color: transparent !important;
+  }
+  .Tooltip-popoverClass-0-2-127 {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    border-width: 0;
+  }
+  .Tooltip-popoverClass-0-2-127 a {
+    color: var(--x-breadcrumb-last);
+    font-weight: 500;
+  }
+  .Tooltip-popoverClass-0-2-127 a:hover {
+    color: var(--x-accent-1-1);
+  }
+  .Tooltip-root-d0-0-2-128 {
+    background-color: var(--x-bg-5);
+  }
+  .Tooltip-item-d1-0-2-129 {  }
+  .Tooltip-item-d1-0-2-129:last-child .Tooltip-link-0-2-122 {
+    color: var(--x-breadcrumb-last);
+  }
+  .Tooltip-link-d2-0-2-130 {
+    color: var(--x-breadcrumb-normal);
+  }
+  .Tooltip-icon-d3-0-2-131 {
+    fill: var(--x-textf-field-color-1);
+  }
+  .Tooltip-underlineText-d4-0-2-132 {
+    color: var(--x-breadcrumb-normal);
+  }
+  .LinkBatch-root-0-2-303 {
+    width: auto;
+    max-width: 100%;
+  }
+  .LinkBatch-title-0-2-304 {
+    color: var(--x-black);
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .LinkBatch-content-0-2-305 {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+  .LinkBatch-expandable-0-2-306 {
+    gap: 4px;
+    border-radius: 12px;
+    flex-direction: column;
+    background-color: var(--x-bg-5);
+  }
+  .LinkBatch-nonExpandable-0-2-307 {
+    border-radius: none;
+    flex-direction: row;
+    background-color: var(--x-bg-1);
+  }
+  .LinkBatch-item-0-2-308 {
+    color: var(--x-breadcrumb-last);
+    display: flex;
+    font-size: 14px;
+    min-width: max-content;
+    align-items: center;
+    line-height: 20px;
+  }
+  .LinkBatch-link-0-2-309 {
+    color: var(--x-breadcrumb-last);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 0;
+    justify-content: space-between;
+  }
+  .LinkBatch-link-0-2-309:hover {
+    color: var(--x-black-1);
+  }
+  .LinkBatch-linkExpandable-0-2-310 {
+    padding-inline: 16px;
+  }
+  .LinkBatch-text-0-2-311 {
+    vertical-align: middle;
+  }
+  .LinkBatch-new-0-2-312 {
+    margin-inline-start: 4px;
+  }
+  .LinkBatch-link-d0-0-2-313 {
+    margin: 0px 16px 8px 0;
+  }
+  .LinkBatch-link-d1-0-2-319 {
+    margin: 0px 16px 8px 0;
+  }
+  .LinkBatch-link-d2-0-2-321 {
+    margin: 0px 16px 8px 0;
+  }
+  .LinkBatch-link-d3-0-2-323 {
+    margin: 0px 16px 8px 0;
+  }
+  .FooterTitle-title-0-2-314 {
+    color: var(--x-black);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .FooterTitle-container-0-2-315 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-block: 16px;
+    justify-content: space-between;
+  }
+  .FooterTitle-icon-0-2-316 {
+    fill: var(--x-text-color-4);
+    transition: all 0.5s;
+  }
+  .FooterTitle-iconReversed-0-2-317 {
+    transform: rotate(180deg);
+  }
+  .FooterTitle-title-d0-0-2-318 {
+    margin-block-end: 16px;
+  }
+  .FooterTitle-title-d1-0-2-320 {
+    margin-block-end: 16px;
+  }
+  .FooterTitle-title-d2-0-2-322 {
+    margin-block-end: 16px;
+  }
+  .StoreLinks-root-0-2-296 {
+    margin-inline-end: 140px;
+  }
+@media screen and (max-width: 1200px) {
+  .StoreLinks-root-0-2-296 {
+    margin-inline-end: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .StoreLinks-root-0-2-296 {
+    margin-block-end: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .StoreLinks-root-0-2-296 {
+    margin-block-end: 20px;
+  }
+}
+  .StoreLinks-logo-0-2-297 {
+    width: fit-content;
+    display: block;
+    margin-block-end: 24px;
+  }
+@media screen and (max-width: 1024px) {
+  .StoreLinks-logo-0-2-297 {
+    margin-block-end: 20px;
+  }
+}
+  .StoreLinks-text-0-2-298 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-block-end: 12px;
+  }
+  .StoreLinks-row-0-2-299 {
+    display: flex;
+    list-style-type: none;
+  }
+@media screen and (max-width: 1024px) {
+  .StoreLinks-row-0-2-299 {
+    flex-wrap: wrap;
+  }
+}
+  .StoreLinks-item-0-2-300 {
+    margin-inline-end: 12px;
+  }
+  .StoreLinks-imgContainer-0-2-301 {
+    width: fit-content;
+    display: block;
+  }
+  .StoreLinks-img-0-2-302 {
+    border-radius: 6px;
+  }
+  .SingleToolFooter-root-0-2-289 {
+    width: min(1440px, 100%);
+    padding: 32px 44px 24px 44px;
+    margin-inline: auto;
+    background-color: #fff;
+  }
+@media screen and (max-width: 1024px) {
+  .SingleToolFooter-root-0-2-289 {
+    padding: 32px 24px 24px;
+  }
+}
+  .SingleToolFooter-row-0-2-290 {
+    display: flex;
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolFooter-row-0-2-290 {
+    flex-direction: column;
+  }
+}
+  .SingleToolFooter-full-0-2-291 {
+    gap: 74px;
+    display: flex;
+    flex-grow: 1;
+  }
+@media screen and (max-width: 1024px) {
+  .SingleToolFooter-full-0-2-291 {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .SingleToolFooter-full-0-2-291 {
+    gap: 0;
+    flex-direction: column;
+  }
+}
+  .SingleToolFooter-termContainer-0-2-292 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .SingleToolFooter-termContainer-0-2-292&gt;section {
+    width: 100%;
+    max-width: 100%;
+  }
+  .SingleToolFooter-termContainerLast-0-2-293 {
+    display: flex;
+    border-top: 1px solid var(--x-bg-13);
+    align-items: center;
+    justify-content: space-between;
+    margin-block-start: 24px;
+    padding-block-start: 20px;
+  }
+  .SingleToolFooter-termContainerLast-0-2-293&gt;section {
+    max-width: 100%;
+  }
+  .SingleToolFooter-termContainerLast-0-2-293&gt;section .footer-batch-link {
+    color: var(--x-black);
+    margin: 0px 24px 0 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+  .SingleToolFooter-copy-0-2-294 {
+    color: var(--x-breadcrumb-last);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .SingleToolFooter-copyText-0-2-295 {
+    color: var(--x-breadcrumb-last);
+    width: 100%;
+    border-top: 1px solid var(--x-bg-13);
+    text-align: center;
+    margin-block-start: 16px;
+    padding-block-start: 20px;
+  }
+  .single-tool-logo-root-0-2-13 {
+    text-decoration: none;
+  }
+  .single-tool-logo-logo-0-2-14 {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .DesktopNav-root-0-2-15 {
+    gap: 32px;
+    flex: 1;
+    height: 80px;
+    display: flex;
+    background: #fff;
+    align-items: center;
+  }
+  .DesktopNav-menuItem-0-2-16 {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .DesktopNav-menuItem-0-2-16:first-child {
+    margin-inline-start: 56px;
+  }
+  .DesktopNav-menuItem-0-2-16:hover .NavDropdown {
+    display: flex;
+  }
+  .DesktopNav-menuItem-0-2-16:hover .DesktopNav-arrowIcon-0-2-19 {
+    fill: #666;
+    transform: rotate(180deg);
+    margin-block-start: 4px;
+  }
+  .DesktopNav-label-0-2-17 {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    margin-inline-end: 8px;
+  }
+  .DesktopNav-icon-0-2-18 {
+    fill: #666;
+    width: 24px;
+    height: 24px;
+    margin-inline-end: 8px;
+  }
+  .DesktopNav-arrowIcon-0-2-19 {
+    fill: var(--x-accent-1-1);
+  }
+  .BottomLinks-root-0-2-43 {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  .BottomLinks-text-0-2-44 {
+    color: var(--x-text-color-4);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  .root-0-2-37 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .root-0-2-37 svg {  }
+  .root-0-2-37 svg path {  }
+  .root-d0-0-2-38 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-blue);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d0-0-2-38 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d0-0-2-38 svg path {
+    fill: var(--x-icon-fill-blue);
+  }
+  .root-d1-0-2-39 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-blue);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d1-0-2-39 svg {  }
+  .root-d1-0-2-39 svg path {
+    fill: var(--x-icon-fill-blue);
+  }
+  .root-d2-0-2-40 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-blue);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d2-0-2-40 svg {  }
+  .root-d2-0-2-40 svg path {
+    fill: var(--x-icon-fill-blue);
+  }
+  .root-d3-0-2-41 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-blue);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d3-0-2-41 svg {  }
+  .root-d3-0-2-41 svg path {
+    fill: var(--x-icon-fill-blue);
+  }
+  .root-d4-0-2-42 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-blue);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d4-0-2-42 svg {  }
+  .root-d4-0-2-42 svg path {
+    fill: var(--x-icon-fill-blue);
+  }
+  .root-d5-0-2-55 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d5-0-2-55 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d5-0-2-55 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d6-0-2-56 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d6-0-2-56 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d6-0-2-56 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d7-0-2-57 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d7-0-2-57 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d7-0-2-57 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d8-0-2-58 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d8-0-2-58 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d8-0-2-58 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d9-0-2-59 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d9-0-2-59 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d9-0-2-59 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d10-0-2-60 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d10-0-2-60 svg {  }
+  .root-d10-0-2-60 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d11-0-2-61 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d11-0-2-61 svg {  }
+  .root-d11-0-2-61 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d12-0-2-62 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d12-0-2-62 svg {  }
+  .root-d12-0-2-62 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d13-0-2-63 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d13-0-2-63 svg {  }
+  .root-d13-0-2-63 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d14-0-2-64 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d14-0-2-64 svg {  }
+  .root-d14-0-2-64 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d15-0-2-65 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d15-0-2-65 svg {  }
+  .root-d15-0-2-65 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d16-0-2-66 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d16-0-2-66 svg {  }
+  .root-d16-0-2-66 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d17-0-2-67 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d17-0-2-67 svg {  }
+  .root-d17-0-2-67 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d18-0-2-68 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d18-0-2-68 svg {  }
+  .root-d18-0-2-68 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d19-0-2-69 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d19-0-2-69 svg {  }
+  .root-d19-0-2-69 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d20-0-2-70 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d20-0-2-70 svg {  }
+  .root-d20-0-2-70 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d21-0-2-71 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d21-0-2-71 svg {  }
+  .root-d21-0-2-71 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d22-0-2-72 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d22-0-2-72 svg {  }
+  .root-d22-0-2-72 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d23-0-2-73 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d23-0-2-73 svg {  }
+  .root-d23-0-2-73 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d24-0-2-74 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-magenta);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d24-0-2-74 svg {  }
+  .root-d24-0-2-74 svg path {
+    fill: var(--x-icon-fill-magenta);
+  }
+  .root-d25-0-2-75 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d25-0-2-75 svg {  }
+  .root-d25-0-2-75 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d26-0-2-76 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d26-0-2-76 svg {  }
+  .root-d26-0-2-76 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d27-0-2-77 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d27-0-2-77 svg {  }
+  .root-d27-0-2-77 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d28-0-2-78 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d28-0-2-78 svg {  }
+  .root-d28-0-2-78 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d29-0-2-79 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d29-0-2-79 svg {  }
+  .root-d29-0-2-79 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d30-0-2-80 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d30-0-2-80 svg {  }
+  .root-d30-0-2-80 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d31-0-2-81 {
+    border-radius: 8px;
+    background-color: none;
+    width: 32px;
+    height: 32px;
+  }
+  .root-d31-0-2-81 svg {
+    width: 24px;
+    height: 24px;
+  }
+  .root-d31-0-2-81 svg path {
+    fill: none;
+  }
+  .root-d32-0-2-82 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-yellow);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d32-0-2-82 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d32-0-2-82 svg path {
+    fill: var(--x-icon-fill-yellow);
+  }
+  .root-d33-0-2-83 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-purple);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d33-0-2-83 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d33-0-2-83 svg path {
+    fill: var(--x-icon-fill-purple);
+  }
+  .root-d34-0-2-84 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d34-0-2-84 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d34-0-2-84 svg path {
+    fill: var(--x-icon-fill-green);
+  }
+  .root-d35-0-2-85 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-red);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d35-0-2-85 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d35-0-2-85 svg path {
+    fill: var(--x-icon-fill-red);
+  }
+  .root-d36-0-2-86 {
+    border-radius: 8px;
+    background-color: none;
+    width: 32px;
+    height: 32px;
+  }
+  .root-d36-0-2-86 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d36-0-2-86 svg path {
+    fill: none;
+  }
+  .root-d37-0-2-87 {
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    width: 32px;
+    height: 32px;
+  }
+  .root-d37-0-2-87 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d37-0-2-87 svg path {
+    fill: #808080;
+  }
+  .root-d38-0-2-264 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d38-0-2-264 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d38-0-2-264 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d39-0-2-265 {
+    border-radius: 50%;
+    background-color: var(--x-bg-6);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d39-0-2-265 svg {
+    width: 16px;
+    height: 16px;
+  }
+  .root-d39-0-2-265 svg path {
+    fill: var(--x-textf-field-color-1);
+  }
+  .root-d40-0-2-270 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d40-0-2-270 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d40-0-2-270 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d41-0-2-271 {
+    border-radius: 50%;
+    background-color: var(--x-bg-6);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d41-0-2-271 svg {
+    width: 16px;
+    height: 16px;
+  }
+  .root-d41-0-2-271 svg path {
+    fill: var(--x-textf-field-color-1);
+  }
+  .root-d42-0-2-276 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d42-0-2-276 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d42-0-2-276 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d43-0-2-277 {
+    border-radius: 50%;
+    background-color: var(--x-bg-6);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d43-0-2-277 svg {
+    width: 16px;
+    height: 16px;
+  }
+  .root-d43-0-2-277 svg path {
+    fill: var(--x-textf-field-color-1);
+  }
+  .root-d44-0-2-284 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d44-0-2-284 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .root-d44-0-2-284 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d45-0-2-285 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d45-0-2-285 svg {  }
+  .root-d45-0-2-285 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d46-0-2-286 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d46-0-2-286 svg {  }
+  .root-d46-0-2-286 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d47-0-2-287 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d47-0-2-287 svg {  }
+  .root-d47-0-2-287 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .root-d48-0-2-288 {
+    border-radius: 8px;
+    background-color: var(--x-icon-bg-light-green);
+    width: 32px;
+    height: 32px;
+  }
+  .root-d48-0-2-288 svg {  }
+  .root-d48-0-2-288 svg path {
+    fill: var(--x-icon-fill-light-green);
+  }
+  .NavMenuItem-root-0-2-29 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .NavMenuItem-text-0-2-30 {
+    color: var(--x-text-color-5);
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 600;
+    margin-inline: 8px;
+  }
+  .NavMenuItem-left-0-2-31 {
+    display: flex;
+    align-items: center;
+  }
+  .NavMenuItem-isRound-0-2-32&gt;div {
+    border-radius: 50%;
+  }
+  .NavMenuItem-right-0-2-33 {
+    gap: 8px;
+    display: flex;
+  }
+  .NavMenuItem-arrow-0-2-34 {
+    fill: #000;
+  }
+  .NavMenuItem-newTag-0-2-35 {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 14px;
+    border-radius: 72px;
+    padding-inline: 6px;
+    background-color: var(--x-new-label-color);
+  }
+  .NavMenuItem-newTabIcon-0-2-36 {
+    fill: var(--x-textf-field-color-1);
+    width: 16px;
+    height: 16px;
+  }
+  .NavSubmenuItem-root-0-2-50 {
+    padding: 4px 16px;
+    border-radius: 8px;
+  }
+  .NavSubmenuItem-root-0-2-50:hover {
+    background-color: var(--x-bg-5);
+  }
+  .NavSubmenuItem-minWidth-0-2-51 {
+    min-width: 228px;
+  }
+  .NavSubmenuItem-container-0-2-52 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .NavSubmenuItem-text-0-2-53 {
+    color: var(--x-breadcrumb-last);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  .NavSubmenuItem-icon-0-2-54 {
+    fill: var(--x-textf-field-color-1);
+    width: 16px;
+    height: 16px;
+  }
+  .DropdownSubmenu-root-0-2-45 {
+    display: none;
+    border-left: 1px solid var(--x-bg-8);
+    margin-inline-start: 20px;
+    padding-inline-start: 20px;
+  }
+  .DropdownSubmenu-container-0-2-46 {
+    display: none;
+  }
+  .DropdownSubmenu-list-0-2-47 {
+    gap: 8px;
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+  }
+  .DropdownSubmenu-visible-0-2-48 {
+    display: block;
+  }
+  .DropdownSubmenu-bottomLinks-0-2-49 {
+    margin-block-start: 12px;
+    margin-inline-start: 16px;
+  }
+  .NavDropdown {
+    display: none;
+  }
+  .NavDropdown-root-0-2-20 {
+    top: 70px;
+    width: max-content;
+    padding: 24px;
+    position: absolute;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    background-color: #fff;
+  }
+  .NavDropdown-left-0-2-21 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .NavDropdown-left-0-2-21.NavDropdownText {
+    min-height: 328px;
+  }
+  .NavDropdown-left-0-2-21.NavDropdownAiWriter {
+    min-height: 328px;
+  }
+  .NavDropdown-left-0-2-21.NavDropdownImage {
+    height: 328px;
+  }
+  .NavDropdown-left-0-2-21.NavDropdownImage .NavDropdown-items-0-2-23 {
+    display: grid;
+    column-gap: 20px;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .NavDropdown-other-0-2-22 {
+    min-height: auto;
+  }
+  .NavDropdown-items-0-2-23 {
+    list-style-type: none;
+  }
+  .NavDropdown-item-0-2-24 {
+    padding: 4px;
+    border-radius: 8px;
+    margin-block-end: 8px;
+  }
+  .NavDropdown-item-0-2-24:hover {
+    background-color: var(--x-bg-5);
+  }
+  .NavDropdown-itemSelected-0-2-25 {
+    background-color: var(--x-bg-5);
+  }
+  .NavDropdown-itemContainer-0-2-26 {
+    display: flex;
+    align-items: center;
+  }
+  .NavDropdown-text-0-2-27 {
+    color: var(--x-text-color-5);
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 600;
+    margin-inline: 8px;
+  }
+  .NavDropdown-arrow-0-2-28 {
+    fill: #000;
+  }
+  .SingleToolSearch-root-0-2-88 {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .SingleToolSearch-search-0-2-89 {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .SingleToolSearch-icon-0-2-90 {
+    top: calc(50% - 10px);
+    left: 12px;
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+  }
+  .SingleToolSearch-icon-0-2-90 path {
+    fill: #999;
+  }
+  .SingleToolSearch-collapsedIcon-0-2-91 {
+    width: 24px;
+    cursor: pointer;
+    height: 24px;
+  }
+  .SingleToolSearch-collapsedIcon-0-2-91 path {
+    fill: #999;
+  }
+@media screen and (max-width: 1024px) {
+  .SingleToolSearch-collasableInputIcon-0-2-92 {
+    top: calc(50% - 12px);
+    left: 16px;
+    width: 24px;
+    height: 24px;
+  }
+  .SingleToolSearch-collasableInputIcon-0-2-92 path {
+    fill: var(--x-black);
+  }
+  .SingleToolSearch-collasableInputIcon-0-2-92:hover path {
+    fill: #787878;
+  }
+}
+  .SingleToolSearch-input-0-2-93 {
+    color: var(--x-black-1);
+    width: 100%;
+    border: 2px solid var(--x-bg-7);
+    height: 40px;
+    font-size: 14px;
+    min-width: 152px;
+    font-weight: 500;
+    padding-left: 42px;
+    border-radius: 12px;
+    padding-right: 12px;
+  }
+  .SingleToolSearch-input-0-2-93::placeholder {
+    color: var(--x-breadcrumb-last);
+  }
+  .SingleToolSearch-input-0-2-93:hover {
+    background-color: var(--x-bg-5);
+  }
+@media screen and (max-width: 1024px) {
+  .SingleToolSearch-collapsableInput-0-2-94 {
+    width: calc(100vw - 320px);
+    transition: .3s ease-in-out all;
+  }
+  .SingleToolSearch-collapsableInput-0-2-94:not(:focus) {
+    width: 0;
+    min-width: 0;
+    border-color: transparent;
+    padding-right: 0;
+  }
+  .SingleToolSearch-collapsableInput-0-2-94:not(:focus):hover {
+    background-color: #fff;
+  }
+}
+  .SingleToolSearch-resultsContainer-0-2-95 {
+    top: calc(100% + 12px);
+    width: 100%;
+    padding: 12px;
+    z-index: 100;
+    position: absolute;
+    min-width: 200px;
+    box-shadow: 0px 1px 4px var(--x-shadow-card);
+    max-height: 600px;
+    overflow-y: auto;
+    text-align: center;
+    border-radius: 16px;
+    background-color: var(--x-bg-1);
+  }
+  .SingleToolSearch-results-0-2-96 {
+    list-style-type: none;
+  }
+  .SingleToolSearch-resultsEntry-0-2-97 {
+    gap: 8px;
+    display: grid;
+    align-items: center;
+    margin-block-end: 16px;
+    grid-template-columns: 24px max-content;
+  }
+  .SingleToolSearch-resultsEntry-0-2-97 svg {
+    max-width: 16px;
+    max-height: 16px;
+  }
+  .SingleToolSearch-resultsEntryLink-0-2-98 {
+    color: var(--x-text-color-1);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+  }
+  .SingleToolSearch-resultsAllLink-0-2-99 {
+    color: var(--x-text-color-4);
+    width: 100%;
+    text-align: left;
+  }
+  .SingleToolSearch-resultsAllLink-0-2-99:hover {
+    color: var(--x-text-color-4);
+  }
+  .SingleToolSearch-resultsAll-0-2-100 {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  .SingleToolSearch-noResultsDescription-0-2-102 {
+    margin: 16px 12px 8px 12px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 14px;
+  }
+  .SingleToolSearch-noResultsList-0-2-103 {
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  .SingleToolSearch-noResultsLink-0-2-104 {
+    color: var(--x-accent-2-1);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .SingleToolSearch-defaultResultsList-0-2-105 {
+    display: block;
+    list-style-type: none;
+  }
+  .SingleToolSearch-defaultResultsLink-0-2-106 {
+    gap: 8px;
+    color: var(--x-text-color-1);
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .SingleToolSearch-defaultResultsLink-0-2-106:last-child {
+    margin-bottom: none;
+  }
+  .base-share-modal-button-0-2-110 {
+    padding: 8px 2px;
+    margin-left: auto;
+    border-color: transparent;
+  }
+  .base-share-modal-button-0-2-110 &gt; span {
+    gap: 4px;
+  }
+  .base-share-modal-button-0-2-110:hover {
+    background-color: transparent;
+  }
+@media screen and (max-width: 480px) {
+  .base-share-modal-button-0-2-110 {
+    padding: 6px 12px;
+  }
+}
+  .base-share-modal-button-0-2-110:hover span {
+    color: #787878;
+  }
+  .base-share-modal-button-0-2-110:hover span &gt; i &gt; svg &gt; path {
+    fill: #787878;
+  }
+  .base-share-modal-svgIcon-0-2-111 {  }
+  .base-share-modal-svgIcon-0-2-111 &gt; svg {
+    width: 20px;
+    height: 20px;
+  }
+  .base-share-modal-svgIcon-0-2-111 &gt; svg &gt; path {
+    fill: var(--x-black);
+  }
+  .base-share-modal-modal-0-2-112 {
+    width: fit-content !important;
+    margin: auto !important;
+    padding: 32px 32px 40px 32px;
+    position: relative;
+  }
+@media screen and (max-width: 480px) {
+  .base-share-modal-modal-0-2-112 {
+    padding: 30px 16px 32px 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+  .base-share-modal-modalClose-0-2-113 {
+    top: 16px;
+    right: 16px;
+    position: absolute;
+  }
+  .base-share-modal-modalClose-0-2-113 &gt; svg {
+    width: 30px;
+    height: 30px;
+  }
+  .base-share-modal-modalClose-0-2-113:hover {
+    cursor: pointer;
+  }
+@media screen and (max-width: 480px) {
+  .base-share-modal-modalClose-0-2-113 {
+    top: 14px;
+    right: 14px;
+  }
+}
+  .base-share-modal-modalClose-0-2-113 &gt; svg &gt;path {
+    fill: rgb(128, 128, 128);
+  }
+  .base-share-modal-copyTextAlert-0-2-114 {
+    top: -80px;
+    width: calc(100% - 64px);
+    position: absolute;
+  }
+@media screen and (max-width: 480px) {
+  .base-share-modal-copyTextAlert-0-2-114 {
+    width: calc(100% - 32px);
+  }
+}
+  .base-share-modal-copyTextAlertContainer-0-2-115 {
+    width: fit-content;
+    background-color: transparent;
+  }
+  .base-share-modal-copyTextAlertContainer-0-2-115[data-reach-dialog-content] {
+    margin: 99px auto 0px;
+    padding: 32px 46px;
+  }
+@media screen and (max-width: 480px) {
+  .base-share-modal-copyTextAlertContainer-0-2-115 {
+    width: auto;
+  }
+  .base-share-modal-copyTextAlertContainer-0-2-115[data-reach-dialog-content] {
+    margin: 56px auto 0px;
+    padding: 24px 16px;
+  }
+}
+  .base-share-modal-modalRoot-0-2-116 {
+    display: flex;
+  }
+  .base-share-modal-copyTextAlert-d4-0-2-117 {
+    visibility: hidden;
+  }
+  .widget-button-buttonContainer-0-2-107 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+  }
+  .widget-button-button-0-2-108 {
+    fill: var(--x-black);
+    cursor: pointer;
+    padding: 8px 9px;
+    background: transparent;
+    margin-left: auto;
+    border-color: transparent;
+  }
+  .widget-button-button-0-2-108 &gt; span {
+    gap: 4px;
+  }
+  .widget-button-button-0-2-108:hover {
+    fill: var(--x-black);
+    background: var(--x-bg-5);
+    border-radius: 24px;
+  }
+@media screen and (max-width: 480px) {
+  .widget-button-button-0-2-108 {
+    padding: 6px 12px;
+  }
+}
+  .widget-button-svgIcon-0-2-109 {
+    fill: var(--x-black);
+    width: 20px;
+    height: 20px;
+  }
+  .SingleToolCard-root-0-2-249 {
+    display: flex;
+  }
+  .SingleToolCard-titleContainer-0-2-250 {
+    gap: 8px;
+    top: 24px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 32px;
+    flex-direction: row;
+  }
+  .SingleToolCard-newLabel-0-2-251 {
+    color: var(--x-white);
+    padding: 4px 12px;
+    font-size: 12px;
+    max-height: 24px;
+    text-align: center;
+    font-weight: 600;
+    margin-left: auto;
+    border-radius: 72px;
+    background-color: var(--x-new-label-color);
+  }
+  .SingleToolCard-itemTitle-0-2-252 {
+    gap: 16px;
+    color: var(--x-text-color-1);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolCard-itemTitle-0-2-252 {  }
+}
+  .SingleToolCard-itemTitleText-0-2-253 {
+    word-break: break-word;
+  }
+  .SingleToolCard-itemDescription-0-2-254 {
+    color: var(--x-text-color-2);
+    margin: 12px 0 24px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .SingleToolCard-cta-0-2-255 {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    padding: 4px;
+    background: var(--x-bg-6);
+    border-radius: 72px;
+  }
+  .SingleToolCard-arrow-0-2-256 {
+    fill: var(--x-textf-field-color-1);
+    width: 16px;
+    height: 16px;
+  }
+  .SingleToolCard-listItem-0-2-257 {
+    flex: 1;
+    display: flex;
+    position: relative;
+    box-shadow: none;
+    border-radius: 16px;
+  }
+  .SingleToolCard-listItem-0-2-257:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 16px var(--x-shadow-card);
+  }
+  .SingleToolCard-spacer-0-2-258 {
+    flex: 1;
+  }
+  .SingleToolCard-titleContainer-d0-0-2-259 {
+    align-items: center;
+  }
+  .SingleToolCard-newLabel-d1-0-2-260 {
+    margin-right: 12px;
+  }
+  .SingleToolCard-itemTitle-d2-0-2-261 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolCard-itemTitle-d2-0-2-261 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+  .SingleToolCard-listItem-d4-0-2-262 {
+    padding: 22px, 24px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .SingleToolCard-titleContainer-d5-0-2-266 {
+    align-items: center;
+  }
+  .SingleToolCard-newLabel-d6-0-2-267 {
+    margin-right: 12px;
+  }
+  .SingleToolCard-itemTitle-d7-0-2-268 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolCard-itemTitle-d7-0-2-268 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+  .SingleToolCard-listItem-d9-0-2-269 {
+    padding: 22px, 24px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .SingleToolCard-titleContainer-d10-0-2-272 {
+    align-items: center;
+  }
+  .SingleToolCard-newLabel-d11-0-2-273 {
+    margin-right: 12px;
+  }
+  .SingleToolCard-itemTitle-d12-0-2-274 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolCard-itemTitle-d12-0-2-274 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+  .SingleToolCard-listItem-d14-0-2-275 {
+    padding: 22px, 24px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .LoadMore-button-0-2-278 {
+    margin: auto;
+    margin-top: 8px;
+    grid-column: 1 / -1;
+    padding-inline: 42px;
+    background-color: var(--x-bg-8);
+  }
+@media screen and (max-width: 480px) {
+  .LoadMore-button-0-2-278 {
+    width: 100%;
+    padding-inline: initial;
+  }
+}
+  .SameCategoryCard-root-0-2-279 {
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: var(--x-bg-1);
+  }
+  .SameCategoryCard-root-0-2-279:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 16px var(--x-shadow-card);
+  }
+  .SameCategoryCard-link-0-2-280 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .SameCategoryCard-textContainer-0-2-281 {
+    display: flex;
+    align-items: center;
+  }
+  .SameCategoryCard-text-0-2-282 {
+    color: var(--x-text-color-1);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 12px;
+  }
+  .SingleToolSimilar-root-0-2-240 {
+    background-color: var(--x-bg-5);
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolSimilar-root-0-2-240 {
+    padding: 0;
+  }
+}
+  .SingleToolSimilar-rootContainer-0-2-241 {
+    margin: 0 auto;
+    padding: 56px 48px;
+    max-width: 1360px;
+    border-radius: 32px;
+  }
+@media screen and (max-width: 480px) {
+  .SingleToolSimilar-rootContainer-0-2-241 {
+    padding: 40px 24px;
+  }
+}
+  .SingleToolSimilar-title-0-2-242 {
+    color: var(--x-text-color-1);
+    font-size: 42px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 500;
+    line-height: 72px;
+  }
+@media screen and (max-width: 768px) {
+  .SingleToolSimilar-title-0-2-242 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+  .SingleToolSimilar-description-0-2-243 {
+    color: var(--x-text-color-2);
+    margin: 16px auto 40px auto;
+    font-size: 16px !important;
+    font-style: normal;
+    text-align: center;
+    font-weight: 500 !important;
+    line-height: 24px;
+  }
+  .SingleToolSimilar-list-0-2-244 {
+    gap: 18px;
+    display: grid;
+    margin-block-end: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+@media screen and (max-width: 1024px) {
+  .SingleToolSimilar-list-0-2-244 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .SingleToolSimilar-list-0-2-244 {
+    grid-template-columns: 1fr;
+  }
+}
+  .SingleToolSimilar-btnContainer-0-2-245 {
+    text-align: center;
+  }
+  .SingleToolSimilar-button-0-2-246 {
+    padding: 12px 47px;
+    border-radius: 24px;
+    background-color: var(--x-bg-7);
+  }
+  .SingleToolSimilar-button-0-2-246:hover {
+    background-color: var(--x-bg-8);
+  }
+  .SingleToolSimilar-button-0-2-246&gt;span {
+    color: var(--x-black) !important;
+    line-height: 24px;
+  }
+  .SingleToolSimilar-sameCategoryContainer-0-2-247 {
+    gap: 16px;
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+  .SingleToolSimilar-smallHeading-0-2-248 {
+    color: var(--x-text-color-1);
+    font-size: 20px !important;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+  .star-with-partial-fill-root-0-2-215 {
+    margin: auto;
+  }
+  .reviews-root-0-2-209 {
+    gap: 12px;
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviews-title-0-2-210 {
+    color: var(--x-text-color-1);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .reviews-starsContainer-0-2-211 {
+    gap: 8px;
+    display: flex;
+    padding: 2px 0;
+  }
+  .reviews-starts-0-2-212 {
+    gap: 2px;
+    display: flex;
+  }
+  .reviews-review-0-2-213 {
+    color: var(--x-text-color-1);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .reviews-noOfReviews-0-2-214 {
+    color: var(--x-textf-field-color-1);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .ImageWithTextSection-root-0-2-216 {
+    margin: 0 35px 94px 35px;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-root-0-2-216 {
+    margin: 32px 24px;
+  }
+}
+  .ImageWithTextSection-content-0-2-217 {
+    gap: 42px;
+    color: #5F5F5F;
+    margin: auto;
+    display: flex;
+    padding: 0 40px;
+    max-width: 1260px;
+    align-items: center;
+    justify-content: space-between;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-content-0-2-217 {
+    padding: 0 0 0 0;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+  .ImageWithTextSection-inverse-0-2-218 {
+    flex-direction: row-reverse;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-inverse-0-2-218 {
+    flex-direction: column-reverse;
+  }
+}
+  .ImageWithTextSection-imgContainer-0-2-219 {  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-imgContainer-0-2-219 {
+    text-align: center;
+  }
+  .ImageWithTextSection-imgContainer-0-2-219 &gt; span {
+    width: auto !important;
+  }
+}
+  .ImageWithTextSection-img-0-2-220 {
+    max-width: 100%;
+  }
+  .ImageWithTextSection-textContainer-0-2-221 {
+    width: min(100%, 557px);
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-textContainer-0-2-221 {
+    width: 100%;
+  }
+}
+  .ImageWithTextSection-heading-0-2-222 {
+    color: var(--x-accent-2-1);
+    margin: auto;
+    font-weight: 500;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-heading-0-2-222 {  }
+}
+  .ImageWithTextSection-smallTitle-0-2-223 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-block-end: 4px;
+  }
+  .ImageWithTextSection-paragraph-0-2-224 {
+    font-weight: 500;
+  }
+  .ImageWithTextSection-paragraph-0-2-224 + div {
+    margin-top: 24px;
+  }
+  .ImageWithTextSection-content-d5-0-2-225 {  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-content-d5-0-2-225 {
+    flex-direction: column-reverse;
+  }
+}
+  .ImageWithTextSection-heading-d7-0-2-226 {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 24px;
+    text-align: left;
+    max-width: auto;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-heading-d7-0-2-226 {
+    font-size: 30px;
+    line-height: 42px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}
+  .ImageWithTextSection-paragraph-d9-0-2-227 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ImageWithTextSection-content-d10-0-2-228 {  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-content-d10-0-2-228 {
+    flex-direction: column-reverse;
+  }
+}
+  .ImageWithTextSection-heading-d12-0-2-229 {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 24px;
+    text-align: left;
+    max-width: auto;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-heading-d12-0-2-229 {
+    font-size: 30px;
+    line-height: 42px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}
+  .ImageWithTextSection-paragraph-d14-0-2-230 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ImageWithTextSection-content-d15-0-2-231 {  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-content-d15-0-2-231 {
+    flex-direction: column-reverse;
+  }
+}
+  .ImageWithTextSection-heading-d17-0-2-232 {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 24px;
+    text-align: left;
+    max-width: auto;
+  }
+@media screen and (max-width: 768px) {
+  .ImageWithTextSection-heading-d17-0-2-232 {
+    font-size: 30px;
+    line-height: 42px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}
+  .ImageWithTextSection-paragraph-d19-0-2-233 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .image-section-columns-info-root-0-2-234 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .image-section-columns-info-item-0-2-235 {
+    width: 50%;
+  }
+  .image-section-columns-info-item-0-2-235:nth-child(2n + 1) .image-section-columns-info-itemContainer-0-2-236 {
+    padding-right: 24px;
+  }
+  .image-section-columns-info-itemContainer-0-2-236 {
+    padding-bottom: 24px;
+  }
+  .image-section-columns-info-itemTitle-0-2-237 {
+    color: #5A00EE;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+  .image-section-columns-info-itemDescription-0-2-238 {
+    color: #5F5F5F;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+@media screen and (max-width: 1024px) {
+  .image-section-columns-info-mobile-0-2-239 {
+    display: block !important;
+  }
+  .image-section-columns-info-mobile-0-2-239 .image-section-columns-info-item-0-2-235 {
+    width: 100%;
+  }
+  .image-section-columns-info-mobile-0-2-239 .image-section-columns-info-item-0-2-235:nth-child(2n + 1) .image-section-columns-info-itemContainer-0-2-236 {
+    padding-right: 0;
+  }
+}
+  .Editor-root-0-2-325 {
+    width: 435px;
+    bottom: -156px;
+    filter: drop-shadow(0px 4px 16px rgba(17, 18, 54, 0.16));
+    background: linear-gradient(180deg, var(--x-accent-2-4) 38%, #FFF 0%);
+    transition: all .3s;
+    border-radius: 8px 8px 0px 0px;
+  }
+@media screen and (max-width: 480px) {
+  .Editor-root-0-2-325 {
+    width: min(344px, 100%);
+  }
+}
+  .Editor-expanded-0-2-326 {
+    bottom: 0;
+  }
+  .Editor-headerContainer-0-2-327 {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Editor-headerLeft-0-2-328 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .Editor-heading-0-2-329 {
+    color: var(--x-bg-1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .Editor-toggleIcon-0-2-330 {
+    width: 20px;
+    height: 20px;
+    padding: 4px 0;
+    transition: all 0.3s;
+    margin-right: 16px;
+  }
+  .Editor-toggleIcon-0-2-330 path {
+    fill: #fff;
+  }
+  .Editor-toggleIconUp-0-2-331 {
+    transform: rotate(-180deg);
+  }
+  .Editor-textareaContainer-0-2-332 {
+    border: 1px solid #e0e0e0;
+    height: 100px;
+    margin: 0 18px 8px 18px;
+    padding: 12px 32px 12px 12px;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  .Editor-textarea-0-2-333 {
+    width: 100%;
+    border: 0;
+    height: 100%;
+    resize: none;
+    font-size: 14px;
+    max-width: 100%;
+    font-weight: 400;
+    line-height: 19px;
+    scrollbar-color: #CBCBCB rgba(0,0,0,0.08);
+    scrollbar-width: thin;
+    background-color: #fff;
+  }
+  .Editor-textarea-0-2-333::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .Editor-textarea-0-2-333::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.08);
+  }
+  .Editor-textarea-0-2-333::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: #CBCBCB;
+  }
+@media (hover: hover) {
+  .Editor-textarea-0-2-333::-webkit-scrollbar-thumb:hover {
+    background-color: #B7B7B7;
+  }
+}
+  .Editor-textareaWithAscii-0-2-334 {
+    font-family: monospace;
+    white-space: pre;
+  }
+  .Editor-close-0-2-335 {
+    right: 24px;
+    bottom: 116px;
+    cursor: pointer;
+    padding: 2px;
+    position: absolute;
+  }
+@media screen and (max-width: 480px) {
+  .Editor-close-0-2-335 {
+    right: 26px;
+  }
+}
+  .Editor-closeIcon-0-2-336 {
+    width: 24px;
+  }
+  .Editor-closeIcon-0-2-336 path {
+    fill: var(--x-textf-field-color-1);
+  }
+  .Editor-buttonContainer-0-2-337 {
+    height: 32px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .Editor-copyButton-0-2-338 {
+    font-size: 14px;
+    border-radius: 72px;
+  }
+  .Editor-shareButton-0-2-339 {
+    font-size: 14px;
+  }
+  .Editor-shareButton-0-2-339&gt;span {
+    gap: 4px;
+  }
+  .Editor-shareButtonIcon-0-2-340 {
+    width: 16px;
+    height: 16px;
+  }
+  .Editor-footer-0-2-341 {
+    display: flex;
+    align-items: center;
+    margin-inline: 16px;
+    justify-content: space-between;
+    margin-block-end: 16px;
+  }
+  .Editor-history-0-2-342 {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Editor-historyIcon-0-2-343 {
+    fill: var(--x-text-color-4);
+    cursor: pointer;
+  }
+  .Editor-historyDisabled-0-2-344 {
+    fill: var(--x-border-2);
+    opcacity: 0.4;
+  }
+  .Editor-shareIcon-0-2-345 {
+    fill: #fff;
+    width: 16px;
+    cursor: pointer;
+    height: 16px;
+  }
+  .Editor-shareIconDisabled-0-2-346 {
+    cursor: initial;
+    opacity: 0.4;
+  }
+  .SanckbarList-root-0-2-5 {
+    gap: 24px;
+    width: 100%;
+    display: flex;
+    z-index: 200;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+  }
+  .SanckbarList-item-0-2-6 {
+    width: calc(100% - 48px);
+    max-width: 890px;
+  }
+  .Emojis-emoji-0-2-199 {
+    margin: 0 0 12px 0;
+    padding: 13px 18px;
+    font-size: 40px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 8px;
+  }
+  .Emojis-emoji-0-2-199:hover {
+    cursor: pointer;
+    background: #F6E8F1;
+    box-shadow: 0px 4px 16px rgba(17, 18, 54, 0.16);
+  }
+  .Emojis-emojiContent-0-2-200 {
+    position: relative;
+  }
+  .Emojis-emojiImg-0-2-201 {
+    display: inline-block;
+    font-size: 10px;
+    max-width: 42px;
+    line-height: 10px;
+    vertical-align: top;
+  }
+  .Emojis-tooltip-0-2-202 {
+    top: -60px;
+    z-index: 10;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .Emojis-tooltipCopy-0-2-203 {
+    left: calc(50% - 59px);
+  }
+  .Emojis-tooltipCopied-0-2-204 {
+    left: calc(50% - 41px);
+  }
+  .SidebarHeading-root-0-2-182 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-block-end: 16px;
+  }
+  .Switcher-root-0-2-133 {
+    background-color: var(--x-bg-5);
+  }
+  .Switcher-toggle-0-2-134 {
+    margin: 8px auto 24px;
+    --switcherItemWidth: 128px;
+  }
+@media screen and (max-width: 480px) {
+  .Switcher-toggle-0-2-134 {
+    max-width: calc(100% - 20px);
+  }
+}
+  .ReviewSnippet-root-0-2-207 {
+    margin: 0 35px 94px 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    padding-bottom: 40px;
+    justify-content: center;
+    background-color: var(--x-bg-5);
+  }
+@media screen and (max-width: 768px) {
+  .ReviewSnippet-root-0-2-207 {
+    margin: 32px 24px;
+  }
+}
+  .ReviewSnippet-subtitle-0-2-208 {
+    color: var(--x-text-color-2);
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .Landing-root-0-2-205 {
+    padding-top: 40px;
+    background-color: var(--x-bg-1);
+  }
+  .Landing-imageSection-0-2-206 {
+    margin-block-end: 0;
+  }
+  .SingleToolHeader-root-0-2-7 {
+    top: 0;
+    z-index: 107;
+    position: sticky;
+    background-color: white;
+  }
+@media screen and (max-width: 480px) {
+  .SingleToolHeader-root-0-2-7 {
+    padding: 0px 24px;
+  }
+}
+  .SingleToolHeader-container-0-2-8 {
+    height: 80px;
+    margin: auto;
+    display: flex;
+    padding: 0 24px;
+    max-width: 1440px;
+    align-items: center;
+    justify-content: space-between;
+  }
+@media screen and (max-width: 480px) {
+  .SingleToolHeader-container-0-2-8 {
+    padding: 0px;
+  }
+}
+  .SingleToolHeader-logo-0-2-9 {
+    margin-right: 0;
+  }
+  .SingleToolHeader-navContainer-0-2-10 {
+    display: flex;
+    align-items: center;
+  }
+  .SingleToolHeader-buttonsContainer-0-2-11 {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+  }
+@media screen and (max-width: 1320px) {
+  .SingleToolHeader-buttonsContainer-0-2-11 {
+    margin-left: auto;
+  }
+}
+  .SingleToolHeader-root-d1-0-2-12 {
+    box-shadow: 0px 0.5px 0px var(--x-border-2);
+  }
+  .root-0-2-149 {
+    background-color: var(--x-bg-5);
+  }
+  .main-0-2-150 {  }
+  .mainContainer-0-2-151 {
+    padding: 0 40px 24px 40px;
+  }
+@media screen and (max-width: 768px) {
+  .mainContainer-0-2-151 {
+    padding: 0 0 24px 0;
+  }
+}
+  .mainContent-0-2-152 {
+    display: flex;
+  }
+  .mainContentSidebar-0-2-153 {
+    flex: 205px 0 0;
+    padding-top: 32px;
+  }
+@media screen and (max-width: 1320px) {
+  .mainContentSidebar-0-2-153 {
+    display: none;
+  }
+}
+  .mainContentResults-0-2-154 {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+  }
+  .mainContentBar-0-2-155 {
+    padding: 12px 0 14px 0;
+    z-index: 10;
+    position: sticky;
+    background-color: var(--x-bg-5);
+  }
+@media screen and (max-width: 1320px) {
+  .mainContentBar-0-2-155 {  }
+}
+  .mainContentBarContent-0-2-156 {
+    width: 100%;
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    padding-inline: 16px;
+    justify-content: space-between;
+  }
+  .mainContentSidebarSticky-0-2-157 {
+    top: 224px;
+    position: sticky;
+    margin-bottom: 32px;
+  }
+@media screen and (max-width: 1320px) {
+  .mainContentSidebarSticky-0-2-157 {
+    top: 197px;
+  }
+}
+  .landing-0-2-158 {
+    background: #ffffff;
+    padding-top: 90px;
+  }
+  .mainContentBar-d2-0-2-159 {
+    top: 56px;
+  }
+@media screen and (max-width: 1320px) {
+  .mainContentBar-d2-0-2-159 {
+    top: 35px;
+  }
+}
+  .SectionWithStickyInput-root-0-2-160 {
+    z-index: 100;
+    position: sticky;
+    text-align: center;
+    background-color: var(--x-bg-5);
+  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-root-0-2-160 {
+    padding: 0 16px 16px 16px;
+  }
+}
+  .SectionWithStickyInput-container-0-2-161 {
+    padding: 32px;
+    box-shadow: 0px 1px 4px var(--x-shadow-card);
+    border-radius: 16px;
+    background-color: var(--x-bg-1);
+  }
+@media screen and (max-width: 480px) {
+  .SectionWithStickyInput-container-0-2-161 {
+    padding: 16px;
+  }
+}
+  .SectionWithStickyInput-imgContainer-0-2-162 {
+    max-width: 100%;
+    margin-top: -16px;
+  }
+  .SectionWithStickyInput-img-0-2-163 {
+    max-width: 50%;
+  }
+  .SectionWithStickyInput-primaryText-0-2-164 {
+    color: var(--x-accent-2-2);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-bottom: 16px;
+  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-primaryText-0-2-164 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+  .SectionWithStickyInput-textContainer-0-2-165 {  }
+@media screen and (max-width: 768px) {
+  .SectionWithStickyInput-textContainer-0-2-165 {  }
+}
+  .SectionWithStickyInput-secondaryText-0-2-166 {  }
+  .SectionWithStickyInput-inputContainer-0-2-167 {
+    display: flex;
+    position: relative;
+    margin-top: 24px;
+    text-align: left;
+    align-items: center;
+  }
+@media screen and (max-width: 768px) {
+  .SectionWithStickyInput-inputContainer-0-2-167 {
+    margin-top: 0;
+  }
+}
+  .SectionWithStickyInput-input-0-2-168 {
+    color: var(--x-text-color-1);
+    width: 100%;
+    border: 2px solid var(--x-border-4);
+    padding: 12px 44px 12px 54px;
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 12px;
+  }
+  .SectionWithStickyInput-input-0-2-168:focus {
+    border-color: var(--x-accent-2-1);
+  }
+  .SectionWithStickyInput-input-0-2-168::placeholder {
+    color: var(--x-text-color-2);
+  }
+  .SectionWithStickyInput-input-0-2-168:hover {
+    border: 2px solid var(--x-border-4);
+    background: #F8F8F8;
+  }
+  .SectionWithStickyInput-input-0-2-168::selection {
+    color: var(--x-bg-1);
+    background-color: var(--x-text-color-2);
+  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-input-0-2-168 {
+    padding: 12px 34px 12px 46px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+  .SectionWithStickyInput-inputNoSearch-0-2-169 {
+    padding-inline-start: 14px;
+  }
+  .SectionWithStickyInput-magnifierIcon-0-2-170 {
+    top: calc(50% - 12px);
+    fill: var(--x-black);
+    left: 20px;
+    position: absolute;
+  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-magnifierIcon-0-2-170 {
+    left: 14px;
+  }
+}
+  .SectionWithStickyInput-filterContainer-0-2-171 {
+    display: none;
+  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-filterContainer-0-2-171 {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
+  .SectionWithStickyInput-filterButton-0-2-172 {
+    border: 0;
+    cursor: pointer;
+    background: var(--x-bg-1);
+  }
+  .SectionWithStickyInput-filterIcon-0-2-173 {
+    fill: var(--x-black);
+  }
+  .SectionWithStickyInput-closeIconContainer-0-2-174 {
+    top: calc(50% - 12px);
+    right: 20px;
+    cursor: pointer;
+    position: absolute;
+  }
+@media screen and (max-width: 480px) {
+  .SectionWithStickyInput-closeIconContainer-0-2-174 {
+    right: 10px;
+  }
+}
+  .SectionWithStickyInput-closeIcon-0-2-175 {
+    fill: var(--x-text-color-6);
+  }
+  .SectionWithStickyInput-root-d6-0-2-176 {
+    top: 48px;
+  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-root-d6-0-2-176 {
+    top: 43px;
+  }
+}
+  .SectionWithStickyInput-textContainer-d8-0-2-177 {  }
+@media screen and (max-width: 768px) {
+  .SectionWithStickyInput-textContainer-d8-0-2-177 {
+    margin-bottom: 0;
+  }
+}
+  .SectionWithStickyInput-secondaryText-d10-0-2-178 {
+    color: var(--x-text-color-2);
+    font-size: 16px;
+    line-height: 24px;
+  }
+@media screen and (max-width: 768px) {
+  .SectionWithStickyInput-secondaryText-d10-0-2-178 {
+    display: none;
+  }
+}
+  .SectionWithStickyInput-input-d12-0-2-179 {  }
+@media screen and (max-width: 1320px) {
+  .SectionWithStickyInput-input-d12-0-2-179 {
+    width: calc(100% - 40px);
+  }
+}
+  .container-0-2-194 {
+    display: flex;
+    padding: 0 0 0 0;
+    position: relative;
+    flex-direction: column;
+  }
+@media screen and (max-width: 768px) {
+  .container-0-2-194 {
+    margin-inline: 16px;
+  }
+}
+  .emojis-0-2-195 {
+    gap: 6px;
+    margin: 0;
+    display: grid;
+    padding: 0;
+    list-style-type: none;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .category-0-2-196 {
+    color: #121212;
+    width: calc(100% - 130px);
+    padding: 24px 0 18px 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    font-feature-settings: &#x27;kern&#x27; off;
+  }
+@media screen and (max-width: 1320px) {
+  .category-0-2-196 {  }
+}
+  .container-d0-0-2-197 {
+    top: 0;
+  }
+  .category-d1-0-2-198 {
+    position: static;
+    z-index: 1;
+    top: 54px;
+  }
+@media screen and (max-width: 1320px) {
+  .category-d1-0-2-198 {
+    top: 33px;
+  }
+}
+  .SymbolsEditor-root-0-2-324 {
+    right: 44px;
+    z-index: 106;
+    position: fixed;
+  }
+@media screen and (max-width: 768px) {
+  .SymbolsEditor-root-0-2-324 {
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, 0);
+  }
+}
+  .category-filter-heading-0-2-181 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-bottom: 12px;
+  }
+  :root {
+    font-size: 16px;
+    --text-heading-color: #121212;
+  }
+  .root-0-2-1 {
+    background-color: var(--x-bg-5);
+  }
+  .resultsMsg-0-2-2 {
+    color: #949494;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .breadcrumbContainer-0-2-3 {
+    margin-top: 12px;
+    padding-left: 40px;
+  }
+@media screen and (max-width: 768px) {
+  .breadcrumbContainer-0-2-3 {
+    padding-left: 16px;
+  }
+}
+  .notifications-0-2-4 {
+    top: 176px;
+  }</style></head><body>
+  
+
+  
+  <div id="__next" data-reactroot>
+  
+  <div class="mainContentResults-0-2-154">
+  
+  <div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Hearts</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>❦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>❤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🧡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🖤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💝</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>💟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>❧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>❥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>❣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ღ</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Arrows</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>←</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>→</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↝</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↾</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↿</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇅</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇆</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇌</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇍</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇎</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇝</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇾</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇿</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Numerals</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅰ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅱ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅲ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅳ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅴ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅵ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅶ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅷ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅸ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅹ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅺ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅻ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅼ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅽ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅾ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ⅿ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↁ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↂ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↇ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅰ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅱ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅲ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅳ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅴ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅵ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅶ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅷ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅸ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅹ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅺ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅻ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅼ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ↄ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↅ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↆ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↈ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅽ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅾ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ⅿ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ↀ</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Currency</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>฿</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₿</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>￠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>¢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>€</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>￡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>£</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ƒ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ł</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>＄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>$</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℳ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>￦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>¥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>￥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>¤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>៛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>﷼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>円</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>元</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>圓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>㍐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>원</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>৳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>₨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>৲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>௹</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Math</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>+</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>−</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>±</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>÷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>×</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⅀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊝</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋆</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋌</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>~</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⩱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⩲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Δ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>|</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>‱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∾</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∿</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⌈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⌉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⌊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⌋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>〈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>〉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋍</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≅</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≆</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≌</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≍</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≎</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>^</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>¹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>²</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>³</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⁾</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>√</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>&lt;</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>&gt;</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≸</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≾</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≿</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∰</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨌</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨍</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨎</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⨜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⌀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦝</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⦣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>°</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⟂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⏊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∝</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊾</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⌒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>◠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>◡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊿</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>△</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>▷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>▽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>◁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>□</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>▭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>▱</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>○</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>◊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>→</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>←</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↚</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>↯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⇏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>¬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>≡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊬</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊭</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊮</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊯</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋎</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ƒ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝛛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝜕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝝏</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝞉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝟃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℵ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℶ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℕ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℝ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℚ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℙ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℤ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℍ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ℂ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∅</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∌</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>∪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊅</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊆</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊍</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⊎</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋳</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋵</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋶</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋷</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋼</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋽</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⋾</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Music</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄅</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄆</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄐</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄑</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄪</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝄫</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝆒</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝆓</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝆦</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝆧</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝆨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇉</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇊</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇋</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇌</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇍</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>𝇎</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Weather</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☁</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☄</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>★</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☆</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☇</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☈</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🏖️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌡️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☀️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☁️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⛅</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⛈️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌤️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌥️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌦️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌧️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌨️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌩️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌪️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌫️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌀</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>🌂</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☂️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⛱️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⚡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>❄️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☃️</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⛄</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Smileys</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>㋡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>㋛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☺</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☹</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>☻</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>〠</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>シ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ッ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ツ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ヅ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ü</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ѷ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>〲</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>〴</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ϡ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ジ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ｼ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ﾂ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ﭢ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ت</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍡</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍢</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍣</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍤</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍥</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍨</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>⍩</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ὃ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ὕ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ὣ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ё</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӓ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӟ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӛ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ӛ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӧ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӱ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӭ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӵ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>Ӫ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ӫ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ಠ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ఠ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ㆅ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ഋ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ൠ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ة</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>ټ</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>유</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>웃</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>우</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>옻</div></div></li></ul></div><div class="container-0-2-194 container-d0-0-2-197"><div class="category-0-2-196 category-d1-0-2-198"><span>Chess</span></div><ul class="emojis-0-2-195"><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♟</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♞</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♙</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♘</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♖</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♕</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♛</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♔</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♜</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♗</div></div></li><li class="Emojis-emoji-0-2-199"><div class="Emojis-emojiContent-0-2-200"><div>♝</div></div></li></ul></div></div>
+  </div>
+  
+    <style>
+        .Emojis-emoji-0-2-199.clicked {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+			font-size:15px;
+        }
+    </style>
+
+    <script>
+        // Get all elements with the class "Emojis-emoji-0-2-199"
+        const emojiElements = document.querySelectorAll(".Emojis-emoji-0-2-199");
+
+        // Add click event listener to each element
+        emojiElements.forEach((element) => {
+            element.addEventListener("click", () => {
+                // Get the content of the div inside the clicked element
+                const emojiContent = element.querySelector(".Emojis-emojiContent-0-2-200 div").textContent;
+
+                // Create a temporary textarea element to copy the text
+                const tempTextarea = document.createElement("textarea");
+                tempTextarea.value = emojiContent;
+
+                // Append the textarea to the body and select its content
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+
+                // Copy the selected text to the clipboard
+                document.execCommand("copy");
+
+                // Remove the temporary textarea
+                document.body.removeChild(tempTextarea);
+
+                // Replace the content with "Copied!"
+                element.querySelector(".Emojis-emojiContent-0-2-200 div").textContent = "Copied!";
+
+                // Add a class to style the element
+                element.classList.add("clicked");
+
+                // Reset the content after 2 seconds
+                setTimeout(() => {
+                    element.querySelector(".Emojis-emojiContent-0-2-200 div").textContent = emojiContent;
+                    element.classList.remove("clicked");
+                }, 2000);
+            });
+        });
+    </script>
+    
